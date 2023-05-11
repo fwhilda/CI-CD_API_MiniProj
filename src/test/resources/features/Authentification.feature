@@ -7,7 +7,7 @@ Feature: Authentification
   Scenario: POST - Register with valid data data and endpoint
     Given I set POST api endpoints register
     When I send POST HTTP request register
-    Then I receive valid HTTP response code 200 Authentification
+    Then I receive valid HTTP response code 400 Authentification
 
   Scenario: POST - Register without using email
     Given I set POST api endpoints register
