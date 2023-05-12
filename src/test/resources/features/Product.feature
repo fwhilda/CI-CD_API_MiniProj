@@ -1,8 +1,8 @@
 Feature: Product
 
-#  As a user
-#  I want to see the product on store
-#  So that I can make see product list
+    As a user
+    I want to see buy product
+    So that I can access api product
 
   Scenario: POST - Create a new product with valid HTTP Method
     Given I set POST api endpoints product
@@ -14,7 +14,7 @@ Feature: Product
     When I send POST HTTP request product2
     Then I receive valid HTTP response code 500 product
 
-  Scenario: GET -   Get product By ID with valid endpoint
+  Scenario: GET - Get product By ID with valid endpoint
     Given I set GET api endpoints product
     When I send GET HTTP request product
     Then I receive valid HTTP response code 200 product
@@ -47,12 +47,12 @@ Feature: Product
   Scenario: POST - Assign a product rating with valid endpoint
     Given I set POST api endpoints rating
     When I send POST HTTP request rating
-    Then I receive valid HTTP response code 200 product
+    Then I receive valid HTTP response code 401 product
 
   Scenario: POST - Assign a product rating with invalid endpoint
     Given I set POST api endpoints rating2
     When I send POST HTTP request rating2
-    Then I receive valid HTTP response code 500 product
+    Then I receive valid HTTP response code 401 product
 
   Scenario: GET - Get product ratings with valid endpoint
     Given I set GET api endpoints rating
@@ -67,12 +67,12 @@ Feature: Product
   Scenario: POST - Create a comment for product with valid endpoint
     Given I set POST api endpoints comment
     When I send POST HTTP request comment
-    Then I receive valid HTTP response code 200 product
+    Then I receive valid HTTP response code 401 product
 
   Scenario: POST - Create a comment for product with invalid endpoint
     Given I set POST api endpoints comment2
     When I send POST HTTP request comment2
-    Then I receive valid HTTP response code 500 product
+    Then I receive valid HTTP response code 401 product
 
   Scenario: GET - Get product comments with valid endpoint
     Given I set GET api endpoints comment

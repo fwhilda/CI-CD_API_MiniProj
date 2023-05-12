@@ -10,50 +10,48 @@ public class OrderSteps {
     Order order;
 
     @Given("I set POST api endpoints order")
-    public void setPostApiEndpointOrder() {
+    public void setPostApiEndpointOrders() {
         order.setPostApiEndpointOrder();
     }
     @Given("I set POST api endpoints order2")
-    public void setPostApiEndpointOrder2() {
+    public void setPostApiEndpointsOrder2() {
         order.setPostApiEndpointOrder2();
     }
 
 
     @Given("I set GET api endpoints order")
-    public void setGetApiEndpointOrder() {order.setGetApiEndpointOrder();}
+    public void setGetApiEndpointsOrder() {order.setGetApiEndpointOrder();}
     @Given("I set GET api endpoints order1")
-    public void setGetApiEndpointOrder1() {
+    public void setGetApiEndpointsOrder1() {
         order.setGetApiEndpointOrder1();
     }
     @Given("I set GET api endpoints order2")
-    public void setGetApiEndpointOrder2() {
+    public void setGetApiEndpointsOrder2() {
         order.setGetApiEndpointOrder2();
     }
     @Given("I set GET api endpoints order3")
-    public void setGetApiEndpointOrder3() {order.setGetApiEndpointOrder3();}
+    public void setGetApiEndpointsOrder3() {order.setGetApiEndpointOrder3();}
 
     @When("I send POST HTTP request order")
-    public void sentPostHttpRequestOrder() {
+    public void sentPostHttpRequestsOrder() {
         order.sendPostHTTPRequestOrder();
     }
     @When("I send POST HTTP request order2")
-    public void sentPostHttpRequestOrder2() {
+    public void sentPostHttpRequestsOrder2() {
         order.sendPostHTTPRequestOrder2();
     }
     @When("I send GET HTTP request order")
-    public void sendGetHttpRequestOrder() {
-        order.sendGetHttpRequestOrder();
-    }
+    public void sendGetHttpRequestsOrder() {order.sendGetHttpRequestOrder();}
     @When("I send GET HTTP request order2")
-    public void sendGetHttpRequestOrder2() {
+    public void sendGetHttpRequestsOrder2() {
         order.sendGetHttpRequestOrder2();
     }
     @When("I send GET HTTP request order3")
-    public void sendGetHttpRequestOrder3() {
+    public void sendGetHttpRequestsOrder3() {
         order.sendGetHttpRequestOrder3();
     }
     @When("I send GET HTTP request order4")
-    public void sendGetHttpRequestOrder4() {
+    public void sendGetHttpRequestsOrder4() {
         order.sendGetHttpRequestOrder4();
     }
     @Then("I receive valid HTTP response code 200 order")
@@ -61,7 +59,11 @@ public class OrderSteps {
         order.receiveValidHttp200Order();
     }
     @Then("I receive valid HTTP response code 404 order")
-    public void receiveValidHttp401Order() {
+    public void receiveValidHttp404Order() {
         order.receiveValidHttp404Order();
+    }
+    @Then("I receive valid HTTP response code 401 order")
+    public void receiveValidHttp401Order() {
+        order.receiveValidHttp401Order();
     }
 }

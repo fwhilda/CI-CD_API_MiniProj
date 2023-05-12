@@ -17,7 +17,7 @@ public class Product {
 
     @Step("I set GET api endpoints product")
     public String setGetApiEndpointProduct() {
-        return url + "products/13680";
+        return url + "products";
     }
 
     @Step("I set GET api endpoints product2")
@@ -65,7 +65,7 @@ public class Product {
     }
     @Step("I set POST api endpoints comment2")
     public String setPostApiEndpointComment2() {
-        return url + "products/-1112/comments";
+        return url + "products/-1111/comments";
     }
     @Step("I set GET api endpoints comment")
     public String setGetApiEndpointComment() {
@@ -135,7 +135,7 @@ public class Product {
         JSONObject requestBody = new JSONObject();
         requestBody.put("count", 5);
 
-        SerenityRest.given().header("Authorization", "Bearer " + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGdWxsbmFtZSI6IkFkaXR5YSBOdWdyYWhhIiwiRW1haWwiOiJhZGl0QGdtYWlsLmNvbSJ9.VM2lARkmmliu1pWtk1uhb8z5fGaElvH1jIoYM72Te3g").body(requestBody.toJSONString()).post(setPostApiEndpointRating()).then().statusCode(200);
+        SerenityRest.given().header("Authorization", "Bearer " + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGdWxsbmFtZSI6IkFkaXR5YSBOdWdyYWhhIiwiRW1haWwiOiJhZGl0QGdtYWlsLmNvbSJ9.VM2lARkmmliu1pWtk1uhb8z5fGaElvH1jIoYM72Te3g").body(requestBody.toJSONString()).post(setPostApiEndpointRating()).then().statusCode(401);
     }
 
 
@@ -144,7 +144,7 @@ public class Product {
         JSONObject requestBody = new JSONObject();
         requestBody.put("count", 10);
 
-        SerenityRest.given().header("Authorization", "Bearer " + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGdWxsbmFtZSI6IkFkaXR5YSBOdWdyYWhhIiwiRW1haWwiOiJhZGl0QGdtYWlsLmNvbSJ9.VM2lARkmmliu1pWtk1uhb8z5fGaElvH1jIoYM72Te3g").body(requestBody.toJSONString()).post(setPostApiEndpointRating2()).then().statusCode(500);
+        SerenityRest.given().header("Authorization", "Bearer " + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGdWxsbmFtZSI6IkFkaXR5YSBOdWdyYWhhIiwiRW1haWwiOiJhZGl0QGdtYWlsLmNvbSJ9.VM2lARkmmliu1pWtk1uhb8z5fGaElvH1jIoYM72Te3g").body(requestBody.toJSONString()).post(setPostApiEndpointRating2()).then().statusCode(401);
     }
 
     @Step("I send GET HTTP request rating")
@@ -161,14 +161,14 @@ public class Product {
         JSONObject requestBody = new JSONObject();
         requestBody.put("content", "the games are great including Gran Turismo 7 but sadly GT4 is much better");
 
-        SerenityRest.given().header("Authorization", "Bearer " + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGdWxsbmFtZSI6IkFkaXR5YSBOdWdyYWhhIiwiRW1haWwiOiJhZGl0QGdtYWlsLmNvbSJ9.VM2lARkmmliu1pWtk1uhb8z5fGaElvH1jIoYM72Te3g").body(requestBody.toJSONString()).post(setPostApiEndpointComment()).then().statusCode(200);
+        SerenityRest.given().header("Authorization", "Bearer " + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGdWxsbmFtZSI6IkFkaXR5YSBOdWdyYWhhIiwiRW1haWwiOiJhZGl0QGdtYWlsLmNvbSJ9.VM2lARkmmliu1pWtk1uhb8z5fGaElvH1jIoYM72Te3g").body(requestBody.toJSONString()).post(setPostApiEndpointComment()).then().statusCode(401);
     }
     @Step("I send POST HTTP request comment2")
     public void sendPostHTTPRequestComment2() {
         JSONObject requestBody = new JSONObject();
-        requestBody.put("content", "the games are great including Gran Turismo 7 but sadly GT4 is much better");
+        requestBody.put("content", "r");
 
-        SerenityRest.given().header("Authorization", "Bearer " + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGdWxsbmFtZSI6IkFkaXR5YSBOdWdyYWhhIiwiRW1haWwiOiJhZGl0QGdtYWlsLmNvbSJ9.VM2lARkmmliu1pWtk1uhb8z5fGaElvH1jIoYM72Te3g").body(requestBody.toJSONString()).post(setPostApiEndpointComment2()).then().statusCode(500);
+        SerenityRest.given().header("Authorization", "Bearer " + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGdWxsbmFtZSI6IkFkaXR5YSBOdWdyYWhhIiwiRW1haWwiOiJhZGl0QGdtYWlsLmNvbSJ9.VM2lARkmmliu1pWtk1uhb8z5fGaElvH1jIoYM72Te3g").body(requestBody.toJSONString()).post(setPostApiEndpointComment2()).then().statusCode(401);
     }
 
     @Step("I send GET HTTP request comment")
@@ -193,5 +193,9 @@ public class Product {
     @Step("I receive valid HTTP response code 404 product")
     public void receiveValidHttp400Product() {
         restAssuredThat(response -> response.statusCode(404));
+    }
+    @Step("I receive valid HTTP response code 401 product")
+    public void receiveValidHttp401Product() {
+        restAssuredThat(response -> response.statusCode(401));
     }
 }

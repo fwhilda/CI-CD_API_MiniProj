@@ -26,9 +26,9 @@ public class Authentification {
     @Step("I send POST HTTP request register")
     public void sendPostHttpRequestRegister() {
         JSONObject requestBody = new JSONObject();
-        requestBody.put("email", "whilyy12@gmail.com");
-        requestBody.put("password", "123456");
-        requestBody.put("fullname", "Whilda Fauziah");
+        requestBody.put("email", "achakbarrrrrr@gmail.com");
+        requestBody.put("password", "akbar12345");
+        requestBody.put("fullname", "hudaemy akbar");
 
         SerenityRest.given().header("Content-Type", "application/json").body(requestBody.toJSONString()).post(setPostApiEndpointRegister());
     }
@@ -74,7 +74,7 @@ public class Authentification {
     @Step("I send POST HTTP request login")
     public void sendPostHttpRequestLogin() {
         JSONObject requestBody = new JSONObject();
-        requestBody.put("email", "whily@gmail.com");
+        requestBody.put("email", "whils12@gmail.com");
         requestBody.put("password", "123456");
 
         SerenityRest.given().header("Content-Type", "application/json").body(requestBody.toJSONString()).post(setPostApiEndpointLogin());}

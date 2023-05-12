@@ -46,7 +46,7 @@ public class ProductSteps {
     }
 
     @Given("I set POST api endpoints rating")
-    public void setPostApiEndpointRating() {
+    public void setPostApiEndpointsRating() {
         product.setPostApiEndpointRating();
     }
 
@@ -117,7 +117,7 @@ public class ProductSteps {
         product.sendDelHttpRequestProduct2();
     }
     @When("I send POST HTTP request rating")
-    public void sentPostHttpRequestRating() {
+    public void sentPostHttpRequestsRating() {
         product.sendPostHTTPRequestRating();
     }
     @When("I send POST HTTP request rating2")
@@ -134,7 +134,7 @@ public class ProductSteps {
         product.sendGetHttpRequestRating2();
     }
     @When("I send POST HTTP request comment")
-    public void sentPostHttpRequestComment() {
+    public void sentPostHttpRequestsComment() {
         product.sendPostHTTPRequestComment();
     }
     @When("I send POST HTTP request comment2")
@@ -164,5 +164,9 @@ public class ProductSteps {
     @Then("I receive valid HTTP response code 500 product")
     public void receiveValidHttp500Product() {
         product.receiveValidHttp500Product();
+    }
+    @Then("I receive valid HTTP response code 401 product")
+    public void receiveValidHttp401Product() {
+        product.receiveValidHttp401Product();
     }
 }

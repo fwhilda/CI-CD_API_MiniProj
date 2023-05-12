@@ -2,12 +2,12 @@ Feature: Authentification
 
   As a user
   I want to see the products
-  So that I can request to the api endpoints to login
+  So that I can request endpoints login
 
   Scenario: POST - Register with valid data data and endpoint
     Given I set POST api endpoints register
     When I send POST HTTP request register
-    Then I receive valid HTTP response code 400 Authentification
+    Then I receive valid HTTP response code 200 Authentification
 
   Scenario: POST - Register without using email
     Given I set POST api endpoints register

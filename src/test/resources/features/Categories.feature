@@ -1,8 +1,8 @@
 Feature: Categories
 
-  As a user
-  I want to retrieve a list of categories
-  So that I can access information about different product categories
+    As a user
+    I want to retrieve a list of categories
+    So that I can access information about different product categories
 
   Scenario: POST - Create a new category with valid endpoint
     Given I set POST api endpoints categories

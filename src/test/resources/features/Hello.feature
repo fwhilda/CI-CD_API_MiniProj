@@ -1,8 +1,8 @@
-Feature: Order
+Feature: Hello
 
-#  As a user
-#  I want to order something
-#  So that I can order item that I want
+  As a user
+  I want to get hello
+  So that I can get api hello endpoints
 
   Scenario: GET - Get Say Hello with valid endpoint
     Given I set GET api endpoints hello
