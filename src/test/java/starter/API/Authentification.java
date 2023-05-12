@@ -26,7 +26,7 @@ public class Authentification {
     @Step("I send POST HTTP request register")
     public void sendPostHttpRequestRegister() {
         JSONObject requestBody = new JSONObject();
-        requestBody.put("email", "achakbar111@gmail.com");
+        requestBody.put("email", "achakbar1111232@gmail.com");
         requestBody.put("password", "akbar12345");
         requestBody.put("fullname", "hudaemy akbar");
 

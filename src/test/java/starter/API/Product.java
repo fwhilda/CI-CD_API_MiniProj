@@ -44,15 +44,15 @@ public class Product {
     }
     @Step("I set POST api endpoints rating")
     public String setPostApiEndpointRating() {
-        return url + "products/13680/ratings";
+        return url + "products/85122/ratings";
     }
     @Step("I set POST api endpoints rating2")
     public String setPostApiEndpointRating2() {
-        return url + "products/11275/ratings";
+        return url + "products/85122/ratings";
     }
     @Step("I set GET api endpoints rating")
     public String setGetApiEndpointRating() {
-        return url + "products/11275/ratings";
+        return url + "products/85122/ratings";
     }
 
     @Step("I set GET api endpoints rating2")
