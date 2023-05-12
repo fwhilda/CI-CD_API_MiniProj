@@ -34,6 +34,7 @@ Feature: Authentification
     When I send GET HTTP request register
     Then I receive valid HTTP response code 405 Authentification
 
+  @login
   Scenario: POST - Login with a valid data and endpoint
     Given I set POST api endpoints login
     When I send POST HTTP request login
